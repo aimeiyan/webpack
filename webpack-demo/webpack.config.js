@@ -16,7 +16,7 @@ module.exports={
 		new htmlWebpackPlugin({
 			filename:'a.html',
 			template:'index.html',
-			inject:'body',
+			inject:false,
 			title:"this is a.html",
 			// chunks:['a','main'],
 			excludeChunks:['b','c']
@@ -24,7 +24,7 @@ module.exports={
 		new htmlWebpackPlugin({
 			filename:'b.html',
 			template:'index.html',
-			inject:'body',
+			inject:false,
 			title:"this is b.html",
 			// chunks:['b'],
 			excludeChunks:['a','c']
@@ -32,7 +32,7 @@ module.exports={
 		new htmlWebpackPlugin({
 			filename:'c.html',
 			template:'index.html',
-			inject:'body',
+			inject:false,
 			title:"this is c.html",
 			// chunks:['c']
 			excludeChunks:['a','b']
